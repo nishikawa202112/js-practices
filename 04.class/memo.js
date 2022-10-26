@@ -90,7 +90,7 @@ const questionclass = class {
 const memos = new memosclass();
 async function main() {
   if (arg[0] == null) {
-    var input = fs.readFileSync("/dev/stdin", "utf8").trim().split("\n");
+    const input = fs.readFileSync("/dev/stdin", "utf8").trim().split("\n");
     await memos.append(input);
   } else {
     const memoLines = await memos.readAll();
